@@ -15,5 +15,19 @@ export default defineConfig({
     env === 'production'
       ? 'https://derricktel.github.io/doo-ui-react/'
       : undefined,
+  navs: [
+    {
+      title: '组件',
+      path: '/components',
+    },
+    {
+      title: '文档',
+      path: '/docs',
+    },
+    {
+      title: 'GitHub',
+      path: 'https://github.com/DerrickTel/doo-ui-react',
+    },
+  ],
   // more config: https://d.umijs.org/config
 });

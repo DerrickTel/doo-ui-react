@@ -13,12 +13,6 @@ Doo UI : 高仿(抄袭)antd的 React UI 库(学习用)
    <a href="https://badge.fury.io/js/doo-ui-react" title="npm">
     <img src="https://img.shields.io/npm/v/doo-ui-react.svg?style=for-the-badge" alt="npm version"/>
   </a>
-  <a href="https://isitmaintained.com/project/doo-ui-react/doo-ui-react">
-    <img src="https://img.shields.io/github/issues/doo-ui-react/doo-ui-react.svg?style=for-the-badge"/>
-  </a>
-  <a href="https://github.com/doo-ui-react/doo-ui-react">
-    <img src="https://img.shields.io/github/stars/doo-ui-react/doo-ui-react.svg?style=for-the-badge" />
-  </a>
 </p>
 
 ## :guitar: 名字由来
@@ -33,13 +27,13 @@ oo = 无穷大
 > 使用 npm
 
 ```
-npm i cuke-ui --save
+npm i cuke-ui-react --save
 ```
 
 > 使用 yarn
 
 ```
-yarn add cuke-ui
+yarn add cuke-ui-react
 ```
 
 ## :unamused: 设计规范

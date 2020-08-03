@@ -1,0 +1,22 @@
+@import '../../styles/color.less';
+
+@prefixCls : doo-divider;
+.@{prefixCls}{background: @border-color-split;
+  &-vertical {
+    top: -0.06em;
+    display: inline-block;
+    width: 1px;
+    height: 0.9em;
+    margin: 0 8px;
+    vertical-align: middle;
+  }
+
+  &-horizontal {
+    display: block;
+    clear: both;
+    width: 100%;
+    min-width: 100%; // Fix https://github.com/ant-design/ant-design/issues/10914
+    height: 1px;
+    margin: 24px 0;
+  }
+}
