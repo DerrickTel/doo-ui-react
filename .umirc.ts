@@ -1,7 +1,6 @@
 import { defineConfig } from 'dumi';
 
 const env = process.env.NODE_ENV;
-console.log(env);
 
 export default defineConfig({
   title: 'doo-ui-react',

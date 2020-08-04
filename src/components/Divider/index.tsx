@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.less';
+import { Size } from '@/types';
 
 interface DividerProps {
   type?: 'horizontal' | 'vertical';

@@ -1,55 +1,68 @@
-@import '../../styles/color.less';
+@import '../../styles/vars.less';
+@import '../../styles/mixin.less';
 
 @prefixCls : doo-btn;
 .@{prefixCls} {
   position: relative;
-  font-size: 0.875rem;
+  font-size: @btn-font-size;
   outline: none;
-  border-radius: 4px;
-  color: #FFF;
-  font-weight: 500;
-  padding: 0 16px;
-  height: 32px;
-  min-width: 64px;
+  border-radius: @btn-default-border-radius;
+  color: @btn-color;
+  font-weight: @btn-font-weight;
+  padding: @btn-padding;
+  height: @btn-default-height;
+  min-width: @btn-default-min-width;
   overflow: hidden;
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: @box-shadow-default;
   cursor: pointer;
   &-ripple {
-    color: inherit;
     position: absolute;
     z-index: 0;
     pointer-events: none;
-    transition: 30s linear;
     animation-name: ripple;
-    animation-timing-function: linear;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-    transform: scale(0);
-    border-radius: 50%;
-    background-color: rgba(255,255,255,0.4);
-  }
-  &:hover {
-    opacity: 0.85;
+    animation-timing-function: @ripple-timing-function;
+    animation-duration: @ripple-duration;
+    animation-fill-mode: @ripple-fill-mode;
+    border-radius: @ripple-border-radius;
+    background-color: @ripple-color;
   }
   &-primary {
-    border: 1px solid @sky-blue;
-    background-color: @sky-blue;
+    .doo-btn-type(@primary-color);
+    &.@{prefixCls}-hollow {
+      .doo-btn-hollow(@primary-color)
+    }
+  }
+  &-warning {
+    .doo-btn-type(@warning-color);
+    &.@{prefixCls}-hollow {
+      .doo-btn-hollow(@warning-color)
+    }
+  }
+  &-error {
+    .doo-btn-type(@error-color);
+    &.@{prefixCls}-hollow {
+      .doo-btn-hollow(@error-color)
+    }
+  }
+  &-success {
+    .doo-btn-type(@success-color);
+    &.@{prefixCls}-hollow {
+      .doo-btn-hollow(@success-color)
+    }
   }
   &-default {
-    border: 1px solid @default-border-color;
-    background-color: #FFF;
-    color: @default-color;
+    .doo-btn-hollow(@default-color)
   }
   &-disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    &:hover {
-      opacity: 0.45;
-    }
   }
 }
 
 @keyframes ripple {
+  0%{
+    transform: scale(0);
+  }
   100% {
     opacity: 0;
     transform: scale(2);

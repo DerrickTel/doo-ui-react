@@ -3,7 +3,7 @@ hero:
   title: doo-ui-react
   desc: React的组件库
   actions:
-    - text: Getting Started
+    - text: 开始
       link: /components
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
@@ -20,17 +20,12 @@ footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by Derrick
 
 ## 轻松上手
 
-手动创建第一篇文档
+```bash
+$ npm install doo-ui-react --save
+```
 
 ```bash
-// 安装 doo-ui-react
-$ npm i dumi
-
-// 引用
-$ mkdir docs && echo '# Hello dumi!' > docs/index.md
-
-// 预览文档
-$ npx dumi dev
+$ yarn add doo-ui-react
 ```
 
 ## 谁在使用

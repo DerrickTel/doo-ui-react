@@ -2,11 +2,13 @@ import React, { useRef, MouseEvent } from 'react';
 import classNames from 'classnames';
 import Loading from '../Loading';
 import './index.less';
+import { COLOR, Size } from '../../types';
 
 interface ButtonProps {
   loading?: boolean;
-  type?: 'primary' | 'default';
+  type?: keyof typeof COLOR;
   disabled?: boolean;
+  hollow?: boolean;
 }
 
 type Button = ButtonProps & Size
@@ -16,6 +18,7 @@ const Button: React.SFC<Button> = ({
   loading,
   type = 'default',
   disabled = false,
+  hollow = false,
 }) => {
 
   const preClassName = 'doo-btn';
@@ -25,7 +28,7 @@ const Button: React.SFC<Button> = ({
   const content = (
     <>
       {children}
-      {loading && <Loading color={type === 'default' ? '#999' : '#FFF'} />}
+      {loading && <Loading hollow color={COLOR[type]} />}
     </>
   );
 
@@ -59,6 +62,7 @@ const Button: React.SFC<Button> = ({
         `${preClassName}-${type}`,
         {
           [`${preClassName}-disabled`]: disabled,
+          [`${preClassName}-hollow`]: hollow,
         },
       )}
       disabled={disabled}
@@ -70,5 +74,4 @@ const Button: React.SFC<Button> = ({
     </button>
   );
 };
-
 export default Button;
