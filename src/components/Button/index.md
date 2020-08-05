@@ -24,54 +24,115 @@ export default () => (
     <Divider />
     <Button type="success">我是按钮</Button>
     <Divider />
-    <Button type="primary" loading>我是按钮</Button>
+    <Button type="primary" loading>
+      我是按钮
+    </Button>
     <Divider type="horizontal" />
+
     <h1>空心</h1>
-    <Button type="default" hollow>我是按钮</Button>
+    <Button type="default" hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="primary" hollow>我是按钮</Button>
+    <Button type="primary" hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="warning" hollow>我是按钮</Button>
+    <Button type="warning" hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="error" hollow>我是按钮</Button>
+    <Button type="error" hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="success" hollow>我是按钮</Button>
+    <Button type="success" hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="primary" hollow loading>我是按钮</Button>
+    <Button type="primary" hollow loading>
+      我是按钮
+    </Button>
     <Divider type="horizontal" />
+
     <h1>禁用</h1>
-    <Button type="default" disabled>我是按钮</Button>
+    <Button type="default" disabled>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="primary" disabled hollow>我是按钮</Button>
+    <Button type="primary" disabled hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="warning" disabled hollow>我是按钮</Button>
+    <Button type="warning" disabled hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="error" disabled hollow>我是按钮</Button>
+    <Button type="error" disabled hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="success" disabled hollow>我是按钮</Button>
+    <Button type="success" disabled hollow>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="primary" disabled hollow loading>我是按钮</Button>
+    <Button type="primary" disabled hollow loading>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="primary" disabled>我是按钮</Button>
+    <Button type="primary" disabled>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="warning" disabled>我是按钮</Button>
+    <Button type="warning" disabled>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="error" disabled>我是按钮</Button>
+    <Button type="error" disabled>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="success" disabled>我是按钮</Button>
+    <Button type="success" disabled>
+      我是按钮
+    </Button>
     <Divider />
-    <Button type="primary" disabled loading>我是按钮</Button>
+    <Button type="primary" disabled loading>
+      我是按钮
+    </Button>
+
+    <Divider type="horizontal" />
+    <h1>三种大小</h1>
+    <Button size="small" type="primary">
+      我是按钮
+    </Button>
+    <Divider />
+    <Button type="primary">我是按钮</Button>
+    <Divider />
+    <Button size="large" type="primary">
+      我是按钮
+    </Button>
+
+    <Divider type="horizontal" />
+    <h1>链接</h1>
+    <Button size="small" type="link">
+      我是按钮
+    </Button>
+    <Divider />
+    <Button type="link">我是按钮</Button>
+    <Divider />
+    <Button size="large" type="link">
+      我是按钮
+    </Button>
   </>
 );
 ```
 
 ### API
 
-
 | 属性     | 说明     | 类型                                                | 默认值  |
 | -------- | -------- | --------------------------------------------------- | ------- |
-| loading  | 加载状态 | *boolean*                                           | false   |
+| loading  | 加载状态 | _boolean_                                           | false   |
 | type     | 类型     | 'primary'\|'warning'\|'error'\|'success'\|'default' | default |
-| disabled | 禁用     | *boolean*                                           | false   |
-| hollow   | 空心     | *boolean*                                           | false   |
-
+| disabled | 禁用     | _boolean_                                           | false   |
+| hollow   | 空心     | _boolean_                                           | false   |
+| size     | 大小     | 'small' \| 'middle' \| 'large'                      | Middle  |

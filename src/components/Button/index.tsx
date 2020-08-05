@@ -11,16 +11,16 @@ interface ButtonProps {
   hollow?: boolean;
 }
 
-type Button = ButtonProps & Size
+type Button = ButtonProps & Size;
 
-const Button: React.SFC<Button> = ({
+const Button: React.FC<Button> = ({
   children,
   loading,
   type = 'default',
   disabled = false,
   hollow = false,
+  size = 'middle',
 }) => {
-
   const preClassName = 'doo-btn';
 
   const btn = useRef<HTMLButtonElement>(null);
@@ -28,7 +28,7 @@ const Button: React.SFC<Button> = ({
   const content = (
     <>
       {children}
-      {loading && <Loading hollow color={COLOR[type]} />}
+      {loading && <Loading color={COLOR[type]} hollow={hollow} size={size} />}
     </>
   );
 
@@ -37,8 +37,8 @@ const Button: React.SFC<Button> = ({
     const width = target.offsetWidth;
     const height = target.offsetHeight;
     const side = width > height ? width : height;
-    const x = (e.clientX - target.offsetLeft) - side / 2;
-    const y = (e.clientY - target.offsetTop) - side / 2;
+    const x = e.clientX - target.offsetLeft - side / 2;
+    const y = e.clientY - target.offsetTop - side / 2;
     const rippleEffect = document.createElement('span');
     Object.assign(rippleEffect.style, {
       height: `${side}px`,
@@ -60,6 +60,7 @@ const Button: React.SFC<Button> = ({
       className={classNames(
         `${preClassName}`,
         `${preClassName}-${type}`,
+        `${preClassName}-${size}`,
         {
           [`${preClassName}-disabled`]: disabled,
           [`${preClassName}-hollow`]: hollow,
@@ -67,7 +68,7 @@ const Button: React.SFC<Button> = ({
       )}
       disabled={disabled}
       ref={btn}
-      type='button'
+      type="button"
       onClick={showRipple}
     >
       {content}

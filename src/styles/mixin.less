@@ -1,24 +1,28 @@
 .doo-btn-type(@color) {
   border: 1px solid @color;
-  color: #FFF;
+  color: #fff;
   background-color: @color;
-  &:not(.doo-btn-disabled)
-    :not(.doo-btn-default)
-    :not(.doo-btn-hollow){
-      &:hover{
-        opacity: 0.85;
-      }
+  &:not(.doo-btn-disabled) :not(.doo-btn-default) :not(.doo-btn-hollow) {
+    &:hover {
+      opacity: 0.85;
     }
+  }
 }
 
 .doo-btn-hollow(@color) {
   color: @color;
   background-color: transparent;
   border: 1px solid @color;
-  &:not(.doo-btn-disabled){
-    &:hover{
+  &:not(.doo-btn-disabled) {
+    &:hover {
       background-color: rgba(@color, 0.1);
     }
   }
 }
 
+.doo-btn-size(@size) {
+  padding: 0 @btn-middle-padding * @size;
+  height: 32px * @size;
+  min-width: 64px * @size;
+  font-size: @btn-font-size * @size;
+}

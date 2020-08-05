@@ -9,20 +9,20 @@ interface LoadingProps {
   hollow?: boolean;
 }
 
-type Loading = LoadingProps & Size
+type Loading = LoadingProps & Size;
 
 const Loading: SFC<Loading> = ({
   color = '#000',
   hollow = false,
+  size = 'middle',
 }) => (
   <div
-    className={`${preClassName} ${preClassName}-small`}
+    className={`${preClassName} ${preClassName}-${size}`}
     style={{
-      border: `2px solid ${color}`,
-      borderBottomColor: hollow ? 'transparent' : '#FFF',
+      border: `2px solid ${hollow ? color : '#FFF'}`,
+      borderBottomColor: hollow ? '#FFF' : 'transparent',
     }}
-  >
-  </div>
+  ></div>
 );
 
 export default Loading;

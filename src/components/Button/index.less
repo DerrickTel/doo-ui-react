@@ -1,20 +1,25 @@
 @import '../../styles/vars.less';
 @import '../../styles/mixin.less';
 
-@prefixCls : doo-btn;
+@prefixCls: doo-btn;
 .@{prefixCls} {
   position: relative;
-  font-size: @btn-font-size;
   outline: none;
   border-radius: @btn-default-border-radius;
   color: @btn-color;
   font-weight: @btn-font-weight;
-  padding: @btn-padding;
-  height: @btn-default-height;
-  min-width: @btn-default-min-width;
   overflow: hidden;
   box-shadow: @box-shadow-default;
   cursor: pointer;
+  &-middle {
+    .doo-btn-size(1);
+  }
+  &-small {
+    .doo-btn-size(0.7);
+  }
+  &-large {
+    .doo-btn-size(1.3);
+  }
   &-ripple {
     position: absolute;
     z-index: 0;
@@ -29,29 +34,40 @@
   &-primary {
     .doo-btn-type(@primary-color);
     &.@{prefixCls}-hollow {
-      .doo-btn-hollow(@primary-color)
+      .doo-btn-hollow(@primary-color);
     }
   }
   &-warning {
     .doo-btn-type(@warning-color);
     &.@{prefixCls}-hollow {
-      .doo-btn-hollow(@warning-color)
+      .doo-btn-hollow(@warning-color);
     }
   }
   &-error {
     .doo-btn-type(@error-color);
     &.@{prefixCls}-hollow {
-      .doo-btn-hollow(@error-color)
+      .doo-btn-hollow(@error-color);
     }
   }
   &-success {
     .doo-btn-type(@success-color);
     &.@{prefixCls}-hollow {
-      .doo-btn-hollow(@success-color)
+      .doo-btn-hollow(@success-color);
     }
   }
   &-default {
-    .doo-btn-hollow(@default-color)
+    .doo-btn-hollow(@default-color);
+  }
+  &-link {
+    color: #2196f3;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    &:not(.doo-btn-disabled) {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
   &-disabled {
     opacity: 0.5;
@@ -60,7 +76,7 @@
 }
 
 @keyframes ripple {
-  0%{
+  0% {
     transform: scale(0);
   }
   100% {
