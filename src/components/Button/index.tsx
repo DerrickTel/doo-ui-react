@@ -9,6 +9,7 @@ interface ButtonProps {
   type?: keyof typeof COLOR;
   disabled?: boolean;
   hollow?: boolean;
+  onClick?: (event: MouseEvent) => void;
 }
 
 type Button = ButtonProps & Size;
@@ -20,6 +21,7 @@ const Button: React.FC<Button> = ({
   disabled = false,
   hollow = false,
   size = 'middle',
+  onClick,
 }) => {
   const preClassName = 'doo-btn';
 
@@ -53,6 +55,7 @@ const Button: React.FC<Button> = ({
     setTimeout(() => {
       rippleEffect.remove();
     }, 300);
+    onClick?.(e);
   };
 
   return (

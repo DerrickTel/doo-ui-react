@@ -1,9 +1,10 @@
 ---
+group:
+  title: Button 按钮
 nav:
   path: /components
 ---
 
-## Button
 
 ### 示例
 

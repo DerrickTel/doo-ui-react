@@ -1,0 +1,26 @@
+@import '../../styles/vars.less';
+@import '../../styles/mixin.less';
+
+@prefixCls: doo-input;
+.@{prefixCls} {
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  border-radius: @border-radius;
+  transition: all @animate-time;
+  border: 1px solid @border-color-split;
+  padding: @input-padding;
+  height: @input-height;
+  font-size: @font-size;
+  line-height: 1.5;
+  width: 100%;
+  color: @font-color;
+
+  &:active,
+  &:hover,
+  &:focus {
+    border-color: @primary-color;
+    outline: none;
+    box-shadow: @input-box-shadow;
+  }
+}

@@ -22,7 +22,8 @@ const Loading: SFC<Loading> = ({
       border: `2px solid ${hollow ? color : '#FFF'}`,
       borderBottomColor: hollow ? '#FFF' : 'transparent',
     }}
-  ></div>
+  >
+  </div>
 );
 
 export default Loading;
