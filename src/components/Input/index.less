@@ -16,11 +16,50 @@
   width: 100%;
   color: @font-color;
 
-  &:active,
-  &:hover,
-  &:focus {
+  &:active:not(&-disabled),
+  &:hover:not(&-disabled),
+  &:focus:not(&-disabled) {
     border-color: @primary-color;
     outline: none;
     box-shadow: @input-box-shadow;
+  }
+
+  &-group {
+    .flex-center(space-around);
+    > .@{prefixCls} {
+      flex: 1 1 auto;
+      width: 100%;
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    &-addon {
+      padding: @input-padding;
+      font-size: @font-size;
+      font-weight: normal;
+      height: @input-height;
+      line-height: @input-height;
+      color: rgba(0, 0, 0, 0.65);
+      text-align: center;
+      background-color: @bg-color;
+      border: 1px solid @border-color-split;
+      border-radius: @border-radius;
+      position: relative;
+      transition: all @animate-time;
+      .flex-center();
+
+      &:first-child {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-right: none;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-left: none;
+      }
+    }
+
   }
 }

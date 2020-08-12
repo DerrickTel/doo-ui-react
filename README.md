@@ -22,18 +22,22 @@ oo = 无穷大
 (抄袭的政采云前端团队的名字 Zoo)
 组件借鉴(抄袭)了 有牌面的 Ant Design, 抱着学习的目的,开发了这个组件库
 
+## :metal: 在线演示
+
+[https://derricktel.github.io/doo-ui-react/](https://derricktel.github.io/doo-ui-react/)
+
 ## :zap: 安装
 
 > 使用 npm
 
 ```
-npm i cuke-ui-react --save
+npm i doo-ui-react --save
 ```
 
 > 使用 yarn
 
 ```
-yarn add cuke-ui-react
+yarn add doo-ui-react
 ```
 
 ## :unamused: 设计规范

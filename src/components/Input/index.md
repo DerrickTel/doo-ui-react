@@ -17,19 +17,15 @@ export default () => (
     <h1>基本使用</h1>
     <Input />
     <Divider type="horizontal" />
-    <Input type="text" />
-    <Divider type="horizontal" />
     <Input type="password" />
     <Divider type="horizontal" />
-    <Input type="range" />
+    <Input disabled />
     <Divider type="horizontal" />
-    <Input type="date" />
+    <h1>前置/后置标签</h1>
+    <Input addonBefore={'https://'} addonAfter={'.com'} />
     <Divider type="horizontal" />
-    <Input type="number" />
-    <Divider type="horizontal" />
-    <Input type="color" />
-    <Divider type="horizontal" />
-    <Input type="email" />
+    <h1>可清空</h1>
+    <Input allowClear />
   </div>
 );
 ```
