@@ -3,10 +3,9 @@ import classNames from 'classnames';
 import './index.less';
 import { Size } from '@/types';
 
-type I = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'>
+type I = Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'>;
 
-interface InputProps
-  extends I {
+interface InputProps extends I {
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   readonly?: boolean;
@@ -43,12 +42,9 @@ const Input: React.FC<Input> = ({
   const input = (
     <input
       {...rest}
-      className={classNames(
-        `${preClassName}`,
-        {
-          [`${preClassName}-disabled`]: disabled,
-        },
-      )}
+      className={classNames(`${preClassName}`, {
+        [`${preClassName}-disabled`]: disabled,
+      })}
       disabled={disabled}
       placeholder={placeholder}
       readOnly={readonly}
@@ -59,11 +55,7 @@ const Input: React.FC<Input> = ({
 
   if (addonBefore || addonAfter) {
     return (
-      <span
-        className={classNames(
-          `${preClassName}-group`,
-        )}
-      >
+      <span className={classNames(`${preClassName}-group`)}>
         <span className={`${preClassName}-group-addon`}>{addonBefore}</span>
         {input}
         <span className={`${preClassName}-group-addon`}>{addonAfter}</span>

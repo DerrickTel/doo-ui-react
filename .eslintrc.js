@@ -197,6 +197,7 @@ module.exports = {
     '@typescript-eslint/type-annotation-spacing': [2],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/indent': 'off',
   },
   settings: {
     polyfills: ['fetch', 'promises', 'url', 'object-assign'],
